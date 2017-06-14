@@ -1,6 +1,13 @@
-# retroart
+# Retroart
 
-> A retro-inspired pixeleditor online
+> A retro-inspired pixeleditor online, build in VueJS.
+
+Hacked together in just some hours to get a better iunserstanding of VueJS
+
+By Nodepond in 2017.
+
+Currently live at:
+[reboot-network.de](http://reboot-network.de/retroart/)
 
 ## Build Setup
 
