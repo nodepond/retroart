@@ -10,16 +10,26 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    selectedColor: '#ff0000'
+    selectedColor: '#ff0000',
+    mousedown: false
   },
   actions: {
     PICKED_COLOR ({ commit }, color) {
       commit('SET_COLOR', color)
+    },
+    MOUSE_DOWN ({ commit }) {
+      commit('SET_MOUSEDOWN', true)
+    },
+    MOUSE_UP ({ commit }) {
+      commit('SET_MOUSEDOWN', false)
     }
   },
   mutations: {
     SET_COLOR (state, color) {
       state.selectedColor = color
+    },
+    SET_MOUSEDOWN (state, pressed) {
+      state.mousedown = pressed
     }
   }
 }

@@ -1,5 +1,9 @@
 <template>
-    <canvas v-bind:style="{ backgroundColor: color }" @click='setColor' />
+    <canvas v-bind:style="{ backgroundColor: color }" 
+      @mouseup='unpressMouse'
+      @mousedown='pressMouse'
+      @mousemove='setColor'
+       />
 </template>
 
 <script>
@@ -8,7 +12,15 @@ export default {
   props: ['pixelColor'],
   methods: {
     setColor () {
-      this.color = this.$store.state.selectedColor
+      if (this.$store.state.mousedown) {
+        this.color = this.$store.state.selectedColor
+      }
+    },
+    pressMouse () {
+      this.$store.dispatch('MOUSE_DOWN')
+    },
+    unpressMouse () {
+      this.$store.dispatch('MOUSE_UP')
     }
   },
   data: function () {
