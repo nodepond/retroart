@@ -1,9 +1,6 @@
 <template>
   <div>
-    <canvas v-bind:style='{ backgroundColor: color }' @click='pickColor' />
-    <canvas v-bind:style='{ backgroundColor: color }' />
-    <canvas v-bind:style='{ backgroundColor: color }' />
-    <canvas v-bind:style='{ backgroundColor: color }' />
+    <canvas v-for="color in colors.pico8" v-bind:style='{ backgroundColor: color }' @click='pickColor' />
   </div>
 </template>
 
@@ -18,7 +15,7 @@ export default {
   },
   data () {
     return {
-      color: '#ff7788',
+      color: this.color,
       colors: {
         pico8:
         [ '#000000', '#1D2B53', '#7E2553', '#008751',
