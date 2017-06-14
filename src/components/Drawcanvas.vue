@@ -4,15 +4,24 @@
       <Pixel pixel-color="#ff99ff" />
       <Pixel pixel-color="#99ee77" />
       <Pixel pixel-color="#339966" />
-    </div>
-    <div class="pixelrow">
-      <Pixel pixel-color="#ff9900" />
-      <Pixel pixel-color="#99ff00" />
       <Pixel pixel-color="#339966" />
     </div>
     <div class="pixelrow">
       <Pixel pixel-color="#ff9900" />
       <Pixel pixel-color="#99ff00" />
+      <Pixel pixel-color="#339966" />
+      <Pixel pixel-color="#339966" />
+    </div>
+    <div class="pixelrow">
+      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#99ff00" />
+      <Pixel pixel-color="#339966" />
+      <Pixel pixel-color="#339966" />
+    </div>
+    <div class="pixelrow">
+      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#99ff00" />
+      <Pixel pixel-color="#339966" />
       <Pixel pixel-color="#339966" />
     </div>
   </div>
