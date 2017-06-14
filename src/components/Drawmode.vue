@@ -1,7 +1,7 @@
 <template>
   <div>
     <div><drawcanvas /></div>
-    <div>Pico-8 palette: <palette @picked-color="selectColor" /></div>
+    <div>Pico-8 palette: <palette /></div>
     <div><current-color /></div>
     <div style="margin-top: 24px;">This is a tiny pixel-editor, made just for fun<br />completely in VueJS in some hours by Nodepond.<br />2017.</div>
   </div>
@@ -18,11 +18,6 @@
       Drawcanvas,
       Palette,
       CurrentColor
-    },
-    methods: {
-      selectColor (col) {
-        this.selectedColor = col
-      }
     },
     data () {
       return {
