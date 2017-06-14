@@ -10,7 +10,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    selectedColor: '#ff0000',
+    selectedColor: '#C2C3C7',
     mousedown: false
   },
   actions: {

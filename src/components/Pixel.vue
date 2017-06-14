@@ -34,8 +34,8 @@ export default {
 
 <style scoped>
   canvas {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     padding: 0;
   }
 </style>

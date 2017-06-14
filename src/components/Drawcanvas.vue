@@ -1,28 +1,7 @@
 <template>
   <div class="drawcanvas">
-    <div class="pixelrow">
-      <Pixel pixel-color="#ff99ff" />
-      <Pixel pixel-color="#99ee77" />
-      <Pixel pixel-color="#339966" />
-      <Pixel pixel-color="#339966" />
-    </div>
-    <div class="pixelrow">
-      <Pixel pixel-color="#ff9900" />
-      <Pixel pixel-color="#99ff00" />
-      <Pixel pixel-color="#339966" />
-      <Pixel pixel-color="#339966" />
-    </div>
-    <div class="pixelrow">
-      <Pixel pixel-color="#ff9900" />
-      <Pixel pixel-color="#99ff00" />
-      <Pixel pixel-color="#339966" />
-      <Pixel pixel-color="#339966" />
-    </div>
-    <div class="pixelrow">
-      <Pixel pixel-color="#ff9900" />
-      <Pixel pixel-color="#99ff00" />
-      <Pixel pixel-color="#339966" />
-      <Pixel pixel-color="#339966" />
+    <div v-for="h in canvasHeight" class="pixelrow">
+      <Pixel v-for="w in canvasWidth" pixel-color="#1D2B53" />
     </div>
   </div>
 </template>
@@ -39,6 +18,8 @@ export default {
   },
   data () {
     return {
+      canvasWidth: 32,
+      canvasHeight: 32
     }
   }
 }
