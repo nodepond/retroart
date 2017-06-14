@@ -5,12 +5,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'currentColor',
-  props: [ 'selectedColor' ],
+  computed: mapState([
+    'selectedColor'
+  ]),
   data () {
     return {
-      color: '#ff8877'
     }
   }
 }
