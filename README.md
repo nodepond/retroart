@@ -2,7 +2,7 @@
 
 > A retro-inspired pixeleditor online, build in VueJS.
 
-Hacked together in just some hours to get a better iunserstanding of VueJS
+Hacked together in just some hours to get a better understanding of VueJS.
 
 By Nodepond in 2017.
 
