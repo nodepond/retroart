@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-  hallo
+  <div class="canvas">
     <div class="pixelrow">
       <Pixel pixel-color="#ff9900" />
       <Pixel pixel-color="#99ee77" />
@@ -24,13 +23,12 @@
 import Pixel from '@/components/Pixel'
 
 export default {
-  name: 'hello',
+  name: 'canvas',
   components: {
     Pixel
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
