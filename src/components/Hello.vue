@@ -1,7 +1,21 @@
 <template>
   <div class="hello">
   hallo
-    <Pixel />
+    <div class="pixelrow">
+      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#99ee77" />
+      <Pixel pixel-color="#339966" />
+    </div>
+    <div class="pixelrow">
+      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#99ff00" />
+      <Pixel pixel-color="#339966" />
+    </div>
+    <div class="pixelrow">
+      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#99ff00" />
+      <Pixel pixel-color="#339966" />
+    </div>
   </div>
 </template>
 
@@ -40,5 +54,10 @@ li {
 
 a {
   color: #42b983;
+}
+
+.pixelrow {
+  display: flex;
+  justify-content: center;
 }
 </style>
