@@ -18,6 +18,7 @@ export default {
     },
     pressMouse () {
       this.$store.dispatch('MOUSE_DOWN')
+      this.setColor()
     },
     unpressMouse () {
       this.$store.dispatch('MOUSE_UP')
