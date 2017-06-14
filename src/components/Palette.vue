@@ -9,8 +9,8 @@ export default {
   name: 'palette',
   methods: {
     pickColor (event) {
-      console.log('pickColor called')
-      console.log(event.target.style.backgroundColor)
+      var col = event.target.style.backgroundColor
+      this.$emit('picked-color', col)
     }
   },
   data () {

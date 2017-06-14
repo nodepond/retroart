@@ -1,15 +1,21 @@
 <template>
   <div>
-    Current color: <canvas v-bind:style='{ backgroundColor: color }' />
+    Current color: <canvas v-bind:style='{ backgroundColor: selectedColor }' />
   </div>
 </template>
 
 <script>
 export default {
   name: 'currentColor',
+  props: [ 'selectedColor' ],
+  method: {
+    selectColor () {
+      console.log('selectColor')
+    }
+  },
   data () {
     return {
-      color: '#ff7788'
+      color: '#ff8877'
     }
   }
 }

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>Draw here: <drawcanvas /></div>
-    <div>Palette: <palette /></div>
-    <div><current-color /></div>
+    <div>Palette: <palette @picked-color="selectColor" /></div>
+    <div><current-color v-bind:selected-color="selectedColor" /></div>
   </div>
 </template>
 
@@ -18,8 +18,14 @@
       Palette,
       CurrentColor
     },
+    methods: {
+      selectColor (col) {
+        this.selectedColor = col
+      }
+    },
     data () {
       return {
+        selectedColor: '#ff0000'
       }
     }
   }
