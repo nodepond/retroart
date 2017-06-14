@@ -1,11 +1,17 @@
 <template>
-    <canvas v-bind:style="{ backgroundColor: color }" />
+    <canvas v-bind:style="{ backgroundColor: color }" @click='setColor' />
 </template>
 
 <script>
 export default {
   name: 'pixel',
   props: ['pixelColor'],
+  methods: {
+    setColor () {
+      console.log(this.$store.state.selectedColor)
+      this.color = this.$store.state.selectedColor
+    }
+  },
   data: function () {
     return {
       color: this.pixelColor

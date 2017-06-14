@@ -1,7 +1,7 @@
 <template>
-  <div class="canvas">
+  <div class="drawcanvas">
     <div class="pixelrow">
-      <Pixel pixel-color="#ff9900" />
+      <Pixel pixel-color="#ff99ff" />
       <Pixel pixel-color="#99ee77" />
       <Pixel pixel-color="#339966" />
     </div>
@@ -23,7 +23,8 @@
 import Pixel from '@/components/Pixel'
 
 export default {
-  name: 'canvas',
+  name: 'drawcanvas',
+  props: [ 'selectedColor' ],
   components: {
     Pixel
   },
