@@ -1,19 +1,22 @@
 <template>
   <div>
-    <div>Palette: <palette /></div>
     <div>Draw here: <drawcanvas /></div>
+    <div>Palette: <palette /></div>
+    <div><current-color /></div>
   </div>
 </template>
 
 <script>
   import Drawcanvas from '@/components/Drawcanvas'
   import Palette from '@/components/Palette'
+  import CurrentColor from '@/components/CurrentColor'
 
   export default {
     name: 'drawmode',
     components: {
       Drawcanvas,
-      Palette
+      Palette,
+      CurrentColor
     },
     data () {
       return {
