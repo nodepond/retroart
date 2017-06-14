@@ -8,11 +8,6 @@
 export default {
   name: 'currentColor',
   props: [ 'selectedColor' ],
-  method: {
-    selectColor () {
-      console.log('selectColor')
-    }
-  },
   data () {
     return {
       color: '#ff8877'

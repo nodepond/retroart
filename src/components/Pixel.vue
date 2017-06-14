@@ -8,7 +8,6 @@ export default {
   props: ['pixelColor'],
   methods: {
     setColor () {
-      console.log(this.$store.state.selectedColor)
       this.color = this.$store.state.selectedColor
     }
   },

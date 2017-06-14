@@ -14,7 +14,6 @@ const store = new Vuex.Store({
   },
   actions: {
     PICKED_COLOR ({ commit }, color) {
-      console.log('color ' + color)
       commit('SET_COLOR', color)
     }
   },
