@@ -19,7 +19,7 @@ const store = new Vuex.Store({
     mousedown: false,
     width: 32,
     height: 32,
-    pixelsize: 36
+    pixelsize: 20
   },
   actions: {
     pickedColor ({ commit }, color) {

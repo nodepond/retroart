@@ -3,6 +3,8 @@
       @mouseup='unpressMouse'
       @mousedown='pressMouse'
       @mousemove='setColor'
+      :width="pixelsize"
+      :height="pixelsize"
       ></canvas>
 </template>
 
@@ -24,6 +26,11 @@ export default {
       this.$store.dispatch('mouseUp')
     }
   },
+  computed: {
+    pixelsize () {
+      return this.$store.state.pixelsize + 'px'
+    }
+  },
   data: function () {
     return {
       color: this.pixelColor
@@ -34,8 +41,6 @@ export default {
 
 <style scoped>
   canvas {
-    width: 12px;
-    height: 12px;
     padding: 0;
   }
 </style>
