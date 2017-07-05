@@ -1,14 +1,18 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="20" justify="center"><drawcanvas /></el-col>
-      <el-col :span="4" justify="center">
+      <el-col :span="16" justify="center">
+        <drawcanvas />
         <div>Pico-8 palette: <palette /></div>
-        <div><current-color /></div>
+        <div><current-color /></div></el-col>
+      <el-col :span="8" justify="center">
+        Place for the new tools...
       </el-col>
     </el-row>
 
-    <div style="margin-top: 24px;">This is a tiny pixel-editor, made just for fun<br />completely in VueJS in some hours by Nodepond.<br />2017.</div>
+    <el-row>
+      <div style="margin-top: 24px;">This is a tiny pixel-editor, made just for fun<br />completely in VueJS in some hours by Nodepond.<br />2017.</div>
+    </el-row>
   </div>
 </template>
 
