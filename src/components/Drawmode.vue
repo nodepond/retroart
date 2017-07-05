@@ -2,11 +2,11 @@
   <div>
     <el-row>
       <el-col :span="16" justify="center">
-        <drawcanvas />
-        <div>Pico-8 palette: <palette /></div>
-        <div><current-color /></div></el-col>
+        <drawcanvas></drawcanvas>
+        <div>Pico-8 palette: <palette></palette></div>
+        <div><current-color></current-color></div></el-col>
       <el-col :span="8" justify="center">
-        <el-select v-model="value" placeholder="Select canvas-size">
+        <el-select v-model="size" placeholder="Select canvas-size">
           <el-option
             v-for="item in sizes"
             :key="item.value"
@@ -18,7 +18,7 @@
     </el-row>
 
     <el-row>
-      <div style="margin-top: 24px;">This is a tiny pixel-editor, made just for fun<br />completely in VueJS in some hours by Nodepond.<br />2017.</div>
+      <div style="margin-top: 24px;">This is a tiny pixel-editor, made just for fun<br>completely in VueJS in some hours by Nodepond.<br>2017.</div>
     </el-row>
   </div>
 </template>
@@ -46,8 +46,19 @@
       }
     },
     computed: {
-      canvasSize () {
-        return 'herllo'
+      size: {
+        get () {
+          return this.$store.state.width + 'x' + this.$store.state.height
+        },
+        set (value) {
+          const payload = {
+            width: parseInt(value.split('x')[0]),
+            height: parseInt(value.split('x')[1]),
+            pixelsize: parseInt(640 / parseInt(value.split('x')[0]))
+          }
+          this.$store.dispatch('changeSize', payload)
+          console.log(value)
+        }
       }
     },
     data () {
@@ -62,8 +73,7 @@
         }, {
           value: '128x128',
           label: '128x128'
-        }],
-        value: ''
+        }]
       }
     }
   }

@@ -30,6 +30,9 @@ const store = new Vuex.Store({
     },
     mouseUp ({ commit }) {
       commit('SET_MOUSEDOWN', false)
+    },
+    changeSize ({ commit }, payload) {
+      commit('SET_SIZE', payload)
     }
   },
   mutations: {
@@ -38,6 +41,11 @@ const store = new Vuex.Store({
     },
     SET_MOUSEDOWN (state, pressed) {
       state.mousedown = pressed
+    },
+    SET_SIZE (state, payload) {
+      state.width = payload.width
+      state.height = payload.height
+      state.pixelsize = payload.pixelsize
     }
   }
 }
