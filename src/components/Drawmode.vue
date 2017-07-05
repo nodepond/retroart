@@ -40,11 +40,6 @@
       Palette,
       CurrentColor
     },
-    methods: {
-      selectSize () {
-        console.log('huhiubouu')
-      }
-    },
     computed: {
       size: {
         get () {
