@@ -3,7 +3,7 @@
       @mouseup='unpressMouse'
       @mousedown='pressMouse'
       @mousemove='setColor'
-       />
+      ></canvas>
 </template>
 
 <script>
@@ -17,11 +17,11 @@ export default {
       }
     },
     pressMouse () {
-      this.$store.dispatch('MOUSE_DOWN')
+      this.$store.dispatch('mouseDown')
       this.setColor()
     },
     unpressMouse () {
-      this.$store.dispatch('MOUSE_UP')
+      this.$store.dispatch('mouseUp')
     }
   },
   data: function () {

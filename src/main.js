@@ -22,13 +22,13 @@ const store = new Vuex.Store({
     pixelsize: 36
   },
   actions: {
-    PICKED_COLOR ({ commit }, color) {
+    pickedColor ({ commit }, color) {
       commit('SET_COLOR', color)
     },
-    MOUSE_DOWN ({ commit }) {
+    mouseDown ({ commit }) {
       commit('SET_MOUSEDOWN', true)
     },
-    MOUSE_UP ({ commit }) {
+    mouseUp ({ commit }) {
       commit('SET_MOUSEDOWN', false)
     }
   },

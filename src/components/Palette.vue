@@ -10,7 +10,7 @@ export default {
   methods: {
     pickColor (event) {
       var col = event.target.style.backgroundColor
-      this.$store.dispatch('PICKED_COLOR', col)
+      this.$store.dispatch('pickedColor', col)
     }
   },
   data () {
