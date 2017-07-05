@@ -4,6 +4,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router'
+import { Row, Col } from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+
+Vue.component(Row)
+Vue.component(Col)
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
@@ -11,17 +16,23 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     selectedColor: '#C2C3C7',
-    mousedown: false
+    mousedown: false,
+    width: 32,
+    height: 32,
+    pixelsize: 20
   },
   actions: {
-    PICKED_COLOR ({ commit }, color) {
+    pickedColor ({ commit }, color) {
       commit('SET_COLOR', color)
     },
-    MOUSE_DOWN ({ commit }) {
+    mouseDown ({ commit }) {
       commit('SET_MOUSEDOWN', true)
     },
-    MOUSE_UP ({ commit }) {
+    mouseUp ({ commit }) {
       commit('SET_MOUSEDOWN', false)
+    },
+    changeSize ({ commit }, payload) {
+      commit('SET_SIZE', payload)
     }
   },
   mutations: {
@@ -30,6 +41,11 @@ const store = new Vuex.Store({
     },
     SET_MOUSEDOWN (state, pressed) {
       state.mousedown = pressed
+    },
+    SET_SIZE (state, payload) {
+      state.width = payload.width
+      state.height = payload.height
+      state.pixelsize = payload.pixelsize
     }
   }
 }

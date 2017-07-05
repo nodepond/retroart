@@ -1,9 +1,11 @@
 <template>
-    <canvas v-bind:style="{ backgroundColor: color }" 
+    <canvas v-bind:style="{ backgroundColor: color }"
       @mouseup='unpressMouse'
       @mousedown='pressMouse'
       @mousemove='setColor'
-       />
+      :width="pixelsize"
+      :height="pixelsize"
+      ></canvas>
 </template>
 
 <script>
@@ -17,11 +19,16 @@ export default {
       }
     },
     pressMouse () {
-      this.$store.dispatch('MOUSE_DOWN')
+      this.$store.dispatch('mouseDown')
       this.setColor()
     },
     unpressMouse () {
-      this.$store.dispatch('MOUSE_UP')
+      this.$store.dispatch('mouseUp')
+    }
+  },
+  computed: {
+    pixelsize () {
+      return this.$store.state.pixelsize + 'px'
     }
   },
   data: function () {
@@ -34,8 +41,6 @@ export default {
 
 <style scoped>
   canvas {
-    width: 20px;
-    height: 20px;
     padding: 0;
   }
 </style>

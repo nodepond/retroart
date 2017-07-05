@@ -1,13 +1,12 @@
 <template>
   <div class="drawcanvas">
     <div v-for="h in canvasHeight" class="pixelrow">
-      <Pixel v-for="w in canvasWidth" pixel-color="#1D2B53" />
+      <pixel v-for="w in canvasWidth" pixel-color="#1D2B53"></pixel>
     </div>
   </div>
 </template>
 
 <script>
-
 import Pixel from '@/components/Pixel'
 
 export default {
@@ -16,10 +15,19 @@ export default {
   components: {
     Pixel
   },
+  computed: {
+    canvasWidth () {
+      return this.$store.state.width
+    },
+    canvasHeight () {
+      return this.$store.state.height
+    },
+    pixelSize () {
+      return this.$store.state.pixelsize
+    }
+  },
   data () {
     return {
-      canvasWidth: 32,
-      canvasHeight: 32
     }
   }
 }
