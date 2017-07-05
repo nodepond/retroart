@@ -18,8 +18,8 @@ export default {
   },
   data () {
     return {
-      canvasWidth: 32,
-      canvasHeight: 32
+      canvasWidth: 64,
+      canvasHeight: 64
     }
   }
 }

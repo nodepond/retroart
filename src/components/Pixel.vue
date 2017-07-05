@@ -1,5 +1,5 @@
 <template>
-    <canvas v-bind:style="{ backgroundColor: color }" 
+    <canvas v-bind:style="{ backgroundColor: color }"
       @mouseup='unpressMouse'
       @mousedown='pressMouse'
       @mousemove='setColor'
@@ -34,8 +34,8 @@ export default {
 
 <style scoped>
   canvas {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     padding: 0;
   }
 </style>
