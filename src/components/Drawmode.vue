@@ -52,7 +52,6 @@
             pixelsize: parseInt(640 / parseInt(value.split('x')[0]))
           }
           this.$store.dispatch('changeSize', payload)
-          console.log(value)
         }
       }
     },
