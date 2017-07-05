@@ -6,6 +6,7 @@
         <div>Pico-8 palette: <palette></palette></div>
         <div><current-color></current-color></div></el-col>
       <el-col :span="8" justify="center">
+        <div>Canvas size</div>
         <el-select v-model="size" placeholder="Select canvas-size">
           <el-option
             v-for="item in sizes"
