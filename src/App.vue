@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <el-row>
+      <el-col :span="24" justify="center">
+        <router-view></router-view>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+import { Row, Col } from 'element-ui'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    elRow: Row,
+    elCol: Col
+  }
 }
 </script>
 

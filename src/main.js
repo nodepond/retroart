@@ -4,6 +4,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router'
+import { Row, Col } from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+
+Vue.component(Row)
+Vue.component(Col)
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
