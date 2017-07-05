@@ -16,7 +16,10 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     selectedColor: '#C2C3C7',
-    mousedown: false
+    mousedown: false,
+    width: 32,
+    height: 32,
+    pixelsize: 36
   },
   actions: {
     PICKED_COLOR ({ commit }, color) {

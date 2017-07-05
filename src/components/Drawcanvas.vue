@@ -16,10 +16,19 @@ export default {
   components: {
     Pixel
   },
+  computed: {
+    canvasWidth () {
+      return this.$store.state.width
+    },
+    canvasHeight () {
+      return this.$store.state.height
+    },
+    pixelSize () {
+      return this.$store.state.pixelsize
+    }
+  },
   data () {
     return {
-      canvasWidth: 64,
-      canvasHeight: 64
     }
   }
 }

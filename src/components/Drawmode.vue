@@ -6,7 +6,14 @@
         <div>Pico-8 palette: <palette /></div>
         <div><current-color /></div></el-col>
       <el-col :span="8" justify="center">
-        Place for the new tools...
+        <el-select v-model="value" placeholder="Select canvas-size">
+          <el-option
+            v-for="item in sizes"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-col>
     </el-row>
 
@@ -20,20 +27,43 @@
   import Drawcanvas from '@/components/Drawcanvas'
   import Palette from '@/components/Palette'
   import CurrentColor from '@/components/CurrentColor'
-  import { Row, Col } from 'element-ui'
+  import { Row, Col, Select, Option } from 'element-ui'
 
   export default {
     name: 'drawmode',
     components: {
       elRow: Row,
       elCol: Col,
+      elSelect: Select,
+      elOption: Option,
       Drawcanvas,
       Palette,
       CurrentColor
     },
+    methods: {
+      selectSize () {
+        console.log('huhiubouu')
+      }
+    },
+    computed: {
+      canvasSize () {
+        return 'herllo'
+      }
+    },
     data () {
       return {
-        selectedColor: '#ff0000'
+        selectedColor: '#ff0000',
+        sizes: [{
+          value: '32x32',
+          label: '32x32'
+        }, {
+          value: '64x64',
+          label: '64x64'
+        }, {
+          value: '128x128',
+          label: '128x128'
+        }],
+        value: ''
       }
     }
   }
